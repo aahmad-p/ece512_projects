@@ -922,7 +922,7 @@ blocks:
       \        \n        \n    def work(self, input_items, output_items):\n      \
       \  # [0,1,0,1,0,0,1,1,0,1,0,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,0,0,0,0,1]\n\
       \        # Start message (\"S\"): 0,1,0,1,0,0,1,1\n        sleep_sec = 2\n \
-      \       \n        data_in = input_items[0]\n        data_in = data_in[len(data_in)-70:len(data_in)]\n\
+      \       \n        data_in = input_items[0]\n        #data_in = data_in[len(data_in)-70:len(data_in)]\n\
       \        #print(self.start_pattern)\n        #print(input_items[0][:])\n   \
       \     \n        print(\"List length: \", len(input_items[0][:]))\n        #\
       \ Check if any element in the array is equal to the target value\n        if\
@@ -930,12 +930,12 @@ blocks:
       \            print(\"Processing ...\")\n            \n            #num_items_search\
       \ = len(data_in) - (len(data_in) % self.payload_length)\n            #data_in_search\
       \ = data_in[0:num_items_search]\n            data_in_search = data_in\n    \
-      \        print(\"Had \", len(data_in), \" items. Searching through \", len(data_in_search),\
-      \ \" items.\")\n            for index, item in enumerate(data_in_search):\n\
+      \        \n            print(\"Had \", len(data_in), \" items. Searching through\
+      \ \", len(data_in_search), \" items.\")\n            for index, item in enumerate(data_in_search):\n\
       \                if (len(data_in_search) - index - 1) < self.payload_length:\n\
-      \                    break\n                self.buffer.append(item)\n     \
-      \           \n                # Check for the start_pattern only when the buffer\
-      \ is full\n                if len(self.buffer) == self.start_pattern_length:\n\
+      \                    break\n                \n                self.buffer.append(item)\n\
+      \                \n                # Check for the start_pattern only when the\
+      \ buffer is full\n                if len(self.buffer) == self.start_pattern_length:\n\
       \                    if list(self.buffer) == self.start_pattern:\n         \
       \               print(\"Pattern found! Reading the next payload_length items\"\
       )\n                        print(index)\n                        print(len(data_in_search))\n\
