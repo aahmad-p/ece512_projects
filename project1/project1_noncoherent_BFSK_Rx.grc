@@ -339,7 +339,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [168, 776.0]
+    coordinate: [168, 784.0]
     rotation: 0
     state: enabled
 - name: analog_simple_squelch_cc_1_0
@@ -375,7 +375,7 @@ blocks:
     bus_structure: null
     coordinate: [1416, 424.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: audio_source_0
   id: audio_source
   parameters:
@@ -392,9 +392,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [40, 1000.0]
+    coordinate: [8, 1008.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: blocks_add_const_vxx_0
   id: blocks_add_const_vxx
   parameters:
@@ -546,6 +546,22 @@ blocks:
     coordinate: [1752, 752.0]
     rotation: 0
     state: enabled
+- name: blocks_complex_to_real_2
+  id: blocks_complex_to_real
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1960, 168.0]
+    rotation: 0
+    state: enabled
 - name: blocks_float_to_complex_0
   id: blocks_float_to_complex
   parameters:
@@ -591,7 +607,23 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1416, 760.0]
+    coordinate: [1464, 768.0]
+    rotation: 0
+    state: enabled
+- name: blocks_float_to_complex_0_2
+  id: blocks_float_to_complex
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1664, 176.0]
     rotation: 0
     state: enabled
 - name: blocks_moving_average_xx_0_0
@@ -844,6 +876,24 @@ blocks:
     coordinate: [712, 680.0]
     rotation: 0
     state: enabled
+- name: blocks_repeat_1_2
+  id: blocks_repeat
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    interp: int(samp_rate/symbol_rate)
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [2016, 1224.0]
+    rotation: 0
+    state: enabled
 - name: blocks_sub_xx_0
   id: blocks_sub_xx
   parameters:
@@ -860,6 +910,27 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [1360, 1088.0]
+    rotation: 0
+    state: enabled
+- name: blocks_throttle2_0
+  id: blocks_throttle2
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    ignoretag: 'True'
+    limit: auto
+    maximum: '0.1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    samples_per_second: samp_rate
+    type: float
+    vlen: '1'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1464, 328.0]
     rotation: 0
     state: enabled
 - name: blocks_throttle2_1
@@ -947,7 +1018,7 @@ blocks:
     repeat: 'True'
     tags: '[]'
     type: byte
-    vector: '[0,1,0,1,0,0,1,1,0,1,0,0,1,0,0,0,0,1,1,0,0,1,0,1,0,1,1,0,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,1,1,1,1,0,0,1,0,0,0,0,1]'
+    vector: '[0,1]'
     vlen: '1'
   states:
     bus_sink: false
@@ -999,6 +1070,27 @@ blocks:
     coordinate: [800, 800.0]
     rotation: 0
     state: disabled
+- name: channels_channel_model_2
+  id: channels_channel_model
+  parameters:
+    affinity: ''
+    alias: ''
+    block_tags: 'False'
+    comment: ''
+    epsilon: '1.001'
+    freq_offset: '0.0'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    noise_voltage: '3'
+    seed: '0'
+    taps: '[1]'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1784, 276.0]
+    rotation: 0
+    state: enabled
 - name: digital_binary_slicer_fb_0
   id: digital_binary_slicer_fb
   parameters:
@@ -1059,8 +1151,8 @@ blocks:
     comment: ''
     constellation: digital.constellation_bpsk().base()
     damping: '1.0'
-    loop_bw: '0.045'
-    max_dev: '1.5'
+    loop_bw: '0.05'
+    max_dev: '100.5'
     maxoutbuf: '0'
     minoutbuf: '0'
     nfilters: '128'
@@ -1075,7 +1167,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1456, 936.0]
+    coordinate: [1512, 1224.0]
     rotation: 0
     state: enabled
 - name: epy_block_0
@@ -1781,7 +1873,7 @@ blocks:
     marker8: '-1'
     marker9: '-1'
     name: Sync Out
-    nconnections: '1'
+    nconnections: '4'
     size: '20000'
     srate: samp_rate
     stemplot: 'False'
@@ -1821,7 +1913,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1832, 968.0]
+    coordinate: [2184, 840.0]
     rotation: 0
     state: enabled
 - name: qtgui_time_sink_x_2_0
@@ -1918,9 +2010,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1872, 648.0]
+    coordinate: [2024, 564.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: virtual_sink_0
   id: virtual_sink
   parameters:
@@ -1931,9 +2023,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1416, 344.0]
+    coordinate: [2088, 256.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: virtual_source_0
   id: virtual_source
   parameters:
@@ -1946,7 +2038,7 @@ blocks:
     bus_structure: null
     coordinate: [96, 1080.0]
     rotation: 0
-    state: disabled
+    state: enabled
 
 connections:
 - [analog_agc_xx_0, '0', blocks_multiply_xx_0, '0']
@@ -1977,13 +2069,16 @@ connections:
 - [blocks_complex_to_mag_squared_0, '0', qtgui_sink_x_0, '0']
 - [blocks_complex_to_mag_squared_0_0, '0', blocks_sub_xx_0, '1']
 - [blocks_complex_to_real_0, '0', audio_sink_0, '0']
-- [blocks_complex_to_real_0, '0', virtual_sink_0, '0']
+- [blocks_complex_to_real_0, '0', blocks_throttle2_0, '0']
 - [blocks_complex_to_real_1, '0', digital_symbol_sync_xx_0, '0']
+- [blocks_complex_to_real_1, '0', qtgui_time_sink_x_2, '2']
 - [blocks_complex_to_real_1, '0', qtgui_time_sink_x_2_0, '0']
+- [blocks_complex_to_real_2, '0', virtual_sink_0, '0']
 - [blocks_float_to_complex_0, '0', analog_simple_squelch_cc_1, '0']
 - [blocks_float_to_complex_0_0, '0', blocks_multiply_xx_0, '0']
 - [blocks_float_to_complex_0_0, '0', blocks_multiply_xx_0_0, '1']
 - [blocks_float_to_complex_0_1, '0', analog_simple_squelch_cc_1_0, '0']
+- [blocks_float_to_complex_0_2, '0', channels_channel_model_2, '0']
 - [blocks_moving_average_xx_0_0, '0', blocks_complex_to_mag_squared_0, '0']
 - [blocks_moving_average_xx_0_0_0, '0', blocks_complex_to_mag_squared_0_0, '0']
 - [blocks_multiply_const_vxx_0, '0', blocks_multiply_xx_0, '0']
@@ -1996,11 +2091,14 @@ connections:
 - [blocks_pack_k_bits_bb_0, '0', blocks_unpack_k_bits_bb_0_0, '0']
 - [blocks_pack_k_bits_bb_0_0, '0', blocks_unpack_k_bits_bb_0, '0']
 - [blocks_repeat_0, '0', analog_frequency_modulator_fc_0, '0']
+- [blocks_repeat_0, '0', qtgui_time_sink_x_2, '1']
 - [blocks_repeat_1, '0', qtgui_sink_x_0_0, '0']
 - [blocks_repeat_1, '0', qtgui_time_sink_x_2, '0']
 - [blocks_repeat_1_0, '0', qtgui_time_sink_x_0_0, '0']
 - [blocks_repeat_1_1, '0', qtgui_time_sink_x_0_0, '1']
+- [blocks_repeat_1_2, '0', qtgui_time_sink_x_2, '3']
 - [blocks_sub_xx_0, '0', blocks_float_to_complex_0_1, '0']
+- [blocks_throttle2_0, '0', blocks_float_to_complex_0_2, '0']
 - [blocks_throttle2_1, '0', blocks_add_xx_0, '0']
 - [blocks_throttle2_1_0_0, '0', blocks_char_to_float_0, '0']
 - [blocks_throttle2_1_0_0, '0', blocks_pack_k_bits_bb_0, '0']
@@ -2012,13 +2110,16 @@ connections:
 - [blocks_vector_source_x_0, '0', digital_packet_headergenerator_bb_default_0, '0']
 - [channels_channel_model_0, '0', blocks_multiply_xx_1, '0']
 - [channels_channel_model_0, '0', qtgui_time_sink_x_0, '0']
+- [channels_channel_model_2, '0', blocks_complex_to_real_2, '0']
 - [digital_binary_slicer_fb_0, '0', blocks_pack_k_bits_bb_0_0, '0']
 - [digital_binary_slicer_fb_0, '0', epy_block_0, '0']
 - [digital_glfsr_source_x_0, '0', blocks_throttle2_1_0_0, '0']
 - [digital_packet_headergenerator_bb_default_0, '0', blocks_char_to_float_0, '0']
 - [digital_symbol_sync_xx_0, '0', blocks_repeat_1, '0']
 - [digital_symbol_sync_xx_0, '0', digital_binary_slicer_fb_0, '0']
+- [digital_symbol_sync_xx_0, '1', blocks_repeat_1_2, '0']
 - [epy_block_0, '0', blocks_null_sink_1, '0']
+- [virtual_source_0, '0', blocks_float_to_complex_0, '0']
 - [virtual_source_0, '0', qtgui_time_sink_x_1, '0']
 
 metadata:
